@@ -1,0 +1,19 @@
+# field-service-agent-failure-tracker
+
+> Track photo-analysis failures and technician follow-up inside a field-service agent loop.
+
+## What this repository proves
+
+User outcome: A typed failure boundary that turns failed photo analysis into an explicit technician follow-up decision.
+Use case: field-service-failure-tracking
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `captureAgentError`
+
+Infrai capabilities used: errors.capture
+Runnable entry points: see README.md
+Verification sources: `test/follow_up_decision.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt

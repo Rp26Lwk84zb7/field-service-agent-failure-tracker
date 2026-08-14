@@ -1,0 +1,20 @@
+{
+  "name": "field-service-agent-failure-tracker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/work_order_server.ts",
+    "demo": "tsx src/run_failed_visit.ts",
+    "test": "tsx --test test/follow_up_decision.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
