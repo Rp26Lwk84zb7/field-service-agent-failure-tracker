@@ -60,3 +60,8 @@ Above is the happy path. The production checklist: The details below apply to Fi
 
 **Field Service Agent Failure Tracker: Observability**
 - **Field Service Agent Failure Tracker:** Capture on the server (`POST /v1/errors/capture`); scrub PII before sending. Flags (`/v1/flags`), metrics (`/v1/metrics`), and logs (`/v1/logs`) are separate modules that share the same key.
+
+## Common questions
+
+**Why is there no client library in the dependencies?**  
+One is not needed: `errors.capture` is a single HTTPS call inside `src/infrai_errors.ts`, and `npx tsx` is the only tooling involved. For a field service failure tracking example that is the entire dependency story.
