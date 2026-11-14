@@ -65,3 +65,6 @@ Above is the happy path. The production checklist: The details below apply to Fi
 
 **Why is there no client library in the dependencies?**  
 One is not needed: `errors.capture` is a single HTTPS call inside `src/infrai_errors.ts`, and `npx tsx` is the only tooling involved. For a field service failure tracking example that is the entire dependency story.
+
+**How much of this is reusable?**  
+`src/infrai_errors.ts` is the only part worth copying; everything else exists to make the example runnable on its own.
